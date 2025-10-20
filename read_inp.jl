@@ -5,7 +5,7 @@ begin
 	using LinearAlgebra
 	using Statistics 
 	
-	function parse_abaqus_file(filename)
+	function read_inp_file(filename)
 	    nodes_list = []  # Список для хранения узлов
 	    elements_list = []  # Список для хранения элементов
 	    reading_nodes = false
@@ -74,7 +74,7 @@ begin
 	end
 	
 
-	Lx, Ly, nx, ny, nodes, connectivity = parse_abaqus_file("C:\\Users\\Admin\\res2.inp")
+	Lx, Ly, nx, ny, nodes, connectivity = read_inp_file("C:\\Users\\Admin\\res2.inp")
 	println("Lx = ", Lx)
 	println("Ly = ", Ly)
 	println("nx = ", nx)
